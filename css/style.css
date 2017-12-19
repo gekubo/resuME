@@ -1,5 +1,3 @@
-
-
 /* General styles */
 
 html,
@@ -11,7 +9,8 @@ body {
   margin-top: 3em;
   color: #333333;
 }
-
+.grid-sizer,
+.grid-item { width: 50%; }
 a,
 a:hover,
 a:visited {
@@ -49,7 +48,7 @@ ul .info {
 h3.section {
   text-transform: uppercase;
   padding-bottom: 0.5em;
-/*  margin: 1.5em 0 1em 0;*/
+  margin: 1.5em 0 1em 0;
   border-bottom: 2px dotted #333333;
 }
 
@@ -630,11 +629,6 @@ figure.effect:hover p.icon-links a:first-child {
 }
 
 ::selection {
-  color: #333333;
-  background: #ffe900;
-}
-
-::-moz-selection {
   color: #333333;
   background: #ffe900;
 }
