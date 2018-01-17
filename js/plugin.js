@@ -2,17 +2,9 @@ $(document).ready(function() {
   $(".setsize").each(function() {
       $(this).height($(this).width());
   });
-  var elem = document.querySelector('.grid');
-  var msnry = new Masonry( elem, {
-    // options
-    itemSelector: '.grid-item',
-    horizontalOrder: true,
-    columnWidth: '.grid-sizer',
-    percentPosition: true
-  });
-
-  var msnry = new Masonry( '.grid', {
-    // options
+  window.shuffleInstance = new window.Shuffle(document.getElementById('grid'), {
+  itemSelector: '.grid_brick',
+  sizer: '.my-sizer-element',
   });
 });
 
@@ -21,6 +13,3 @@ $(window).on('resize', function(){
       $(this).height($(this).width());
   });
 });
-
-
-

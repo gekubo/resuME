@@ -1,78 +1,42 @@
 /* General styles */
-#trabajo {
-  height: 500px;
-}
-.slider {
-  position: absolute;
-  top: 20%;
-  left: 0;
-  width: 100%;
-  height: 128px;
-  background: #fff;
-  transform: translateZ(0);
-}
-.slider:hover .link {
-  width: 5%;
-}
-.slider .link {
-  position: relative;
-  float: left;
-  width: 33%;
-  height: 100%;
-  color: #aaa;
-  border-right: 1px solid #ddd;
-  transition: .5s width;
-  overflow: hidden;
-  cursor: pointer;
-}
-.slider .link:last-child {
-  border-right: 0;
-}
-.slider .link:hover {
-  width: 66%;
-  color: #555;
-}
-.slider .link .small-icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  line-height: 78px;
-  text-align: center;
-  font-family: foundation-icon;
-  font-size: 128px;
-}
-.slider .link .full {
-  position: absolute;
-  top: 22px;
-  left: 100px;
-  text-transform: uppercase;
-}
-.slider .link .full .sld-title, .nav .link .full .sld-content {
-  font-size: 16px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-.slider .link .full .sld-content {
-  margin-top: 8px;
-  font-size: 12px;
-}
-.slider .link .prev-icon {
-  position: absolute;
-  top: 0;
-  left: 7px;
-  font-family: foundation-icon;
-  font-size: 24px;
-  line-height: 78px;
-  transition: .5s opacity;
-  opacity: 0;
-}
-.slider .link:hover .prev-icon {
-  opacity: 0;
-}
-.slider:hover .prev-icon {
-  opacity: 1;
-}
 
+
+/*.container {
+  float: left;
+  width: 100%;
+}*/
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+}
+.grid {
+  position: relative;
+}
+.item {
+  float: left;
+  display: block;
+  position: absolute;
+  width: calc(50% - 10px);
+  margin: 5px;
+  z-index: 1;
+  background: #000;
+  color: #fff;
+}
+.item.muuri-item-dragging {
+  z-index: 3;
+}
+.item.muuri-item-releasing {
+  z-index: 2;
+}
+.item.muuri-item-hidden {
+  z-index: 0;
+}
+.item-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 
 html,
 body {
@@ -101,9 +65,26 @@ a:hover {
   margin-right: 5px;
 }
 
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
 dt {
+  font-weight: 700;
   border-right: solid 2px #444444;
 }
+
+
 dd {
   margin: 0;
 }
@@ -136,7 +117,7 @@ h3.section {
   min-height: 250px;
 }
 
-.social-icons, .skills-icons {
+.social-icons {
   font-size: 2em;
 }
 
@@ -232,9 +213,11 @@ footer .column h4
   text-align: center;
   font-size: 1em;
   color: #555555;
-/*  border: 1px solid #dddddd;
-  border-radius: 3%;*/
+  border: 1px solid #dddddd;
+  border-radius: 3%;
   line-height: -1;
+  width: 8rem;
+  height: 8rem;
   margin-bottom: 1rem;
 }
 
