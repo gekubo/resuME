@@ -1,79 +1,4 @@
 /* General styles */
-#trabajo {
-  height: 500px;
-}
-.slider {
-  position: absolute;
-  top: 20%;
-  left: 0;
-  width: 100%;
-  height: 128px;
-  background: #fff;
-  transform: translateZ(0);
-}
-.slider:hover .link {
-  width: 5%;
-}
-.slider .link {
-  position: relative;
-  float: left;
-  width: 33%;
-  height: 100%;
-  color: #aaa;
-  border-right: 1px solid #ddd;
-  transition: .5s width;
-  overflow: hidden;
-  cursor: pointer;
-}
-.slider .link:last-child {
-  border-right: 0;
-}
-.slider .link:hover {
-  width: 66%;
-  color: #555;
-}
-.slider .link .small-icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  line-height: 78px;
-  text-align: center;
-  font-family: foundation-icon;
-  font-size: 128px;
-}
-.slider .link .full {
-  position: absolute;
-  top: 22px;
-  left: 100px;
-  text-transform: uppercase;
-}
-.slider .link .full .sld-title, .nav .link .full .sld-content {
-  font-size: 16px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-.slider .link .full .sld-content {
-  margin-top: 8px;
-  font-size: 12px;
-}
-.slider .link .prev-icon {
-  position: absolute;
-  top: 0;
-  left: 7px;
-  font-family: foundation-icon;
-  font-size: 24px;
-  line-height: 78px;
-  transition: .5s opacity;
-  opacity: 0;
-}
-.slider .link:hover .prev-icon {
-  opacity: 0;
-}
-.slider:hover .prev-icon {
-  opacity: 1;
-}
-
-
 html,
 body {
   font-size: 1em;
@@ -82,6 +7,23 @@ body {
 body {
   margin-top: 3em;
   color: #333333;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: calc(50% - 15px) calc(50% - 15px);
+  grid-auto-rows: 20px;
+}
+
+@media only screen and (max-width: 960px) {
+  .grid {
+    grid-template-columns: 100%;
+  }
+  .item {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }
 
 a,
