@@ -16,16 +16,6 @@ body {
   grid-auto-rows: 20px;
 }
 
-@media only screen and (max-width: 960px) {
-  .grid {
-    grid-template-columns: 100%;
-  }
-  .item {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-}
-
 a,
 a:hover,
 a:visited {
@@ -50,12 +40,6 @@ dd {
   margin: 0;
 }
 
-.social-icons .list-inline-item {
-  margin: 0;
-  padding: 0;
-  font-size: 1.5em;
-}
-
 ul .info {
   border-left: 1px solid #333333;
 }
@@ -67,59 +51,40 @@ h3.section {
   border-bottom: 2px dotted #333333;
 }
 
-/*TEMP*/
-.row>.card-columns>.card>.card-title::before {
-  display: none;
-}
-.row>.card-columns>.card {
-  border: 0px;
-}
-.lang {
-  min-height: 250px;
+.language a:hover, .language a:active, .language a:active {
+  font-weight: 500;
+  color: #000000;
+  text-decoration: overline;
 }
 
 .social-icons, .skills-icons {
-  font-size: 2em;
+  font-size: 2.8em;
+  color: #555555;
 }
 
-footer
-{
-	border-top: 3px solid #555555;
+footer {
+	border-top: 2px solid #cccccc;
 	padding: 24px;
-  font-size: 16px;
-  margin-top: 1em;
+  margin: 2em 0;
+  height: 5em;
 }
 
 footer,
-footer a
-{
-	color: #333;
+footer a {
+	color: #555555;
 }
 
-footer a:hover
-{
-	color: #000;
+footer a:hover {
+	color: #000000;
 	text-decoration: none;
-}
-footer a:hover::after
-{
-	display: inline-block;
-  padding-left: 4px;
-  font-family: 'FontAwesome';
-	content: '\f08e';
-	font-size: 0.8em;
-  speak: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.5em;
 }
 
-footer .column ul li
-{
+footer .column ul li {
 	margin-bottom: 6px;
 }
 
-footer .column h4
-{
+footer .column h4 {
 	font-size: 1.5rem;
 	text-transform: uppercase;
 	border-bottom: 2px dotted #333;
@@ -127,13 +92,12 @@ footer .column h4
   margin-bottom: 24px;
 }
 
-.social-icons
-{
-	margin-bottom: 12px;
+footer p {
+  margin: 0;
 }
 
 /* Icon Animations */
-.animation {
+/*.animation {
   color: #555555;
 }
 
@@ -163,68 +127,23 @@ footer .column h4
   font-size: 5em;
   border: 1px solid #444444;
   border-radius: 50%;
-  padding: 0.3em 0.5em; 
+  padding: 0.3em 0.5em;
 }
 .animation p {
   margin-top: 10em;
-} 
-
-/* Icon Box */
-.box {
-  text-align: center;
-  font-size: 1em;
-  color: #555555;
-/*  border: 1px solid #dddddd;
-  border-radius: 3%;*/
-  line-height: -1;
-  margin-bottom: 1rem;
-}
-
-.box span {
-  font-size: 3.3rem;
-  color: #444444;
-}
-
-/* Cards */
-.card-header {
-  font-weight: 500;
-}
-
-.card-header::before,
-.card-header::after {
-  content: "\f120";
-  font-family: "foundation-icons";
-}
-
-.card-header::before {
-  margin-right: 5px;
-}
-
-.card-header::after {
-  margin-left: 5px;
-}
-
-.card-title::before {
-  content: "\f11f";
-  font-family: "foundation-icons";
-  margin-right: 7px;
-}
-
-.card-text {
-  padding: 0 10px 0 17px;
-}
+}*/
 
 /* Timeline  */
-
 .timeline-container {
   position: relative;
   margin: 15px 0 15px 30px;
 }
 
 .timeline a[target=_blank]:hover::after {
-  content: "\f1bc";
+  content: "\f112";
   font-family: "foundation-icons";
-  margin-left: 5px;
+  margin-left: 3px;
+  font-size: 0.7em;
 }
 
 .timeline {
@@ -283,7 +202,8 @@ footer .column h4
 
 .timeline .topic {
   color: #333333;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 1.1em;
 }
 
 .timeline .location {
@@ -302,25 +222,6 @@ footer .column h4
   position: relative;
   width: 160px;
   border-radius: 50%;
-}
-
-@media only screen and (max-width:575px) {
-  body {
-    margin-top: 1em;
-  }
-
-  dt {
-    border-right: 0;
-  }
-
-  dt span {
-    display: none;
-  }
-  .progress-radial {
-    width: 44%;
-    margin-left: 28%;
-    margin-bottom: 1em;
-  }
 }
 
 .progress-radial .overlay {
@@ -384,7 +285,6 @@ footer .column h4
   background-image: linear-gradient(90deg, #555555 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #555555 50%, #f0f0f0 50%, #f0f0f0);
 }
 
-
 /* Skills Level */
 .skills li {
   list-style: none;
@@ -395,24 +295,26 @@ footer .column h4
 .unchecked,
 .checked {
   float: right;
+  display: inline-block;
+  margin-top: 7px;
+  margin-right: 3px;
+  height: 11px;
+  width: 11px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.unchecked:first-child,
+.checked:first-child {
+  margin-right: 0;
 }
 
 .unchecked {
-  height: 11px;
-  width: 11px;
   background-color: #ccc;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 3px;
 }
 
 .checked {
-  height: 11px;
-  width: 11px;
   background-color: #444;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 3px;
 }
 
 /* Filtered gallery */
@@ -646,11 +548,44 @@ figure.effect:hover p.icon-links a:first-child {
   background: #ffe900;
 }
 
-/* 
- * Foundation Icons v 3.0
- * Made by ZURB 2013 http://zurb.com/playground/foundation-icon-fonts-3
- * MIT License
- */
+/* Media Queries */
+@media only screen and (max-width:575px) {
+  body {
+    margin-top: 1em;
+  }
+
+  dt {
+    border-right: 0;
+  }
+
+  dt span {
+    display: none;
+  }
+  .progress-radial {
+    width: 44%;
+    margin-left: 28%;
+    margin-bottom: 1em;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .grid {
+    grid-template-columns: 100%;
+  }
+  .item {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+.override-padding {
+  padding-right: 0;
+  padding-left: 0;
+}
+}
+
+/* Foundation Icons v3.0 */
 
 @font-face {
   font-family: "foundation-icons";

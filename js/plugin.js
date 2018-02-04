@@ -4,10 +4,6 @@ $(document).ready(function() {
   $(".setsize").each(function() {
       $(this).height($(this).width());
   });
-/*  window.shuffleInstance = new window.Shuffle(document.getElementById('grid'), {
-  itemSelector: '.grid_brick',
-  sizer: '.my-sizer-element',
-  });*/
 
   $(window).on("resize", function(){
     $(".setsize").each(function() {
@@ -39,9 +35,9 @@ $(document).ready(function() {
   window.onload = resizeAllGridItems();
   window.addEventListener("resize", resizeAllGridItems);
 
-  allItems = document.getElementsByClassName("item");
-  for(x=0;x<allItems.length;x++){
-    imagesLoaded( allItems[x], resizeInstance);
-  };
+  // allItems = document.getElementsByClassName("item");
+  // for(x=0;x<allItems.length;x++){
+  //   imagesLoaded( allItems[x], resizeInstance);
+  // };
 
 }); // End of document.ready
