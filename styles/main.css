@@ -65,8 +65,7 @@ h3.section {
 footer {
 	border-top: 2px solid #cccccc;
 	padding: 24px;
-  margin: 2em 0;
-  height: 5em;
+  margin: 5em 0 1em 0;
 }
 
 footer,
@@ -589,8 +588,8 @@ figure.effect:hover p.icon-links a:first-child {
 
 @font-face {
   font-family: "foundation-icons";
-  src: url("../font/foundation-icons.eot");
-  src: url("../font/foundation-icons.eot?#iefix") format("embedded-opentype"), url("../font/foundation-icons.woff") format("woff"), url("../font/foundation-icons.ttf") format("truetype"), url("../font/foundation-icons.svg#fontcustom") format("svg");
+  src: url("../icons/foundation.eot");
+  src: url("../icons/foundation.eot?#iefix") format("embedded-opentype"), url("../icons/foundation.woff") format("woff"), url("../icons/foundation.ttf") format("truetype"), url("../icons/foundation.svg#fontcustom") format("svg");
   font-weight: normal;
   font-style: normal;
 }
